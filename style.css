@@ -1,0 +1,812 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  max-width: 150%;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 45px;
+  line-height: 64px;
+  color: #222;
+}
+
+h4 {
+  font-size: 30px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 12px;
+  color: #465b52;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+}
+
+/* Header */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 80px;
+  background: wheat;
+  position: sticky;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: saddlebrown;
+}
+
+#navbar li a.active:after::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  background: saddlebrown;
+  height: 2px;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#hero {
+  background-image: url(img/Ảnh\ bìa.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 50% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#hero h4 {
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+#hero h1 {
+  color: beige;
+}
+
+#hero h2 {
+  color: white;
+}
+
+#hero button {
+  background-color: forestgreen;
+  color: white;
+  padding: 14px 80px 14px 65px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  border: 0;
+}
+
+/* Feature - Các tiện ích */
+#feature {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0px;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.feature-list {
+  display: flex;
+  gap: 20px;
+}
+
+#feature h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #888;
+  text-align: left;
+  margin-left: -710px;
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.fe-box {
+  position: relative;
+  width: 250px;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fe-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.fe-box:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  /* nền ở bên dưới hình */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  transform: translateY(45%);
+  transition: transform 0.4s ease;
+}
+.fe-box:hover .overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  transform: translateY(0);
+}
+
+.overlay h6 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 14px;
+}
+.desc {
+  color: floralwhite;
+  font-weight: 300;
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s;
+}
+
+.fe-box:hover .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Product */
+#product1 {
+  text-align: center;
+}
+
+/* List */
+.room-list {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.room-list a {
+  text-decoration: none;
+  color: #0c0c0c;
+}
+
+/* card */
+
+.room-card {
+  width: 500px;
+  text-align: center;
+}
+
+/* IMAGE */
+.room-img {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.room-img img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  transition: 0.4s;
+  object-fit: cover;
+}
+/* chỉnh overlay (cái con mắt) */
+.room-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.room-overlay i {
+  color: #fff;
+  font-size: 40px;
+  transform: scale(0.7);
+  transition: 0.3s;
+}
+
+/* hover(khi di chuột vào phòng) */
+.room-img:hover img {
+  transform: scale(1.1);
+}
+
+.room-img:hover .room-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.room-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+
+  border-top: 1px solod #ccc;
+  border-bottom: 1px solod #ccc;
+}
+
+.room-info div {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+.room-info div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 1px;
+  height: 60%;
+  background: #ccc;
+}
+.room-info div {
+  font-size: 18px;
+}
+
+.room-info span {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.room-card {
+  min-height: 500px;
+}
+
+.room-card h3 {
+  margin-top: 15px;
+}
+
+.amenities span {
+  font-size: 16px;
+  color: #777;
+}
+.icon {
+  display: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-top: -15%;
+}
+
+.amenities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* New letters*/
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(img/banner/b14.png);
+  background-position: 20% 30%;
+  background-color: #8b795e;
+}
+#newsletter h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #383838;
+}
+
+#newsletter p span {
+  color: #ffbd27;
+}
+
+#newsletter .form {
+  display: flex;
+  width: 30%;
+}
+
+#newsletter input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+  background-color: #cdb38b;
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo {
+  margin-bottom: 10px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none; /*mất cái gạch dưới chân link*/
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .install .row img {
+  border-radius: 6px;
+  border: 1px solid #8b795e;
+}
+
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+footer .follow i:hover,
+footer a:hover {
+  color: saddlebrown;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
+
+/* Room Page */
+#page-header {
+  background-image: url(img/Ảnh\ bìa.jpg);
+  width: 100%;
+  height: 35vh;
+
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+#page-header h2 {
+  color: #ffffff;
+}
+
+/* HERO */
+.hero-room {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-room img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+}
+
+/* INFO BOX */
+.room-info-box {
+  display: flex;
+  width: 70%;
+  margin: 0px auto 10px;
+  background: white;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  gap: 40px;
+}
+
+.room-info-box .left {
+  flex: 2;
+}
+
+.room-info-box .right {
+  flex: 1;
+  border-left: 1px solid #0c0c0c;
+  padding-left: 20px;
+  font-weight: 300;
+}
+
+.room-info-box .right h3 {
+  font-size: 10px;
+  font-weight: 300;
+  color: #9b9898;
+  margin-bottom: 5px;
+}
+.room-info-box .right h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  margin-top: -15px;
+  margin-bottom: -20px;
+  margin-left: 30px;
+}
+
+.room-info-box button {
+  width: 50%;
+  background: #0b3d1b;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.room-info-box ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.room-info-box ul li i {
+  font-size: 14px;
+  color: #999;
+  width: 20px; /* giúp icon thẳng hàng */
+}
+
+/* GALLERY */
+.room-gallery {
+  display: flex;
+  gap: 10px;
+  padding: 40px;
+}
+
+.room-gallery img {
+  width: 25%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* About page */
+#page-header.about-header {
+  background-image: url(img/home\ cinema.jpg);
+  width: 100%;
+  height: 70vh;
+  background-position: top 50% right 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+#page-header.about-header h1 {
+  color: #b6b2b2;
+  font-size: 40px;
+  font-weight: 30;
+  margin-top: -200px;
+}
+#page-header.about-header h2 {
+  color: #fff;
+  display: center;
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: -20px;
+}
+
+#page-header.about-header p {
+  color: #fff;
+  margin-top: 20px;
+  font-weight: 30;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 340px;
+}
+
+.about-stats {
+  width: 30%;
+  margin: -150px auto 0;
+  text-align: center;
+  padding: 10px 60px;
+  background: #c2a99f;
+  border-radius: 20px;
+}
+
+.about-stats p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.stats-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stats-list div h2 {
+  font-size: 40px;
+  font-weight: 500;
+  margin: -15px auto;
+}
+
+.stats-list div span {
+  font-size: 13px;
+  color: #555;
+}
+
+.contact-header h1 {
+  text-align: center;
+  justify-content: center;
+  font-weight: 400;
+  color: #272542;
+}
+
+#contact-details .map {
+  width: 60%;
+  height: 350px;
+  margin: auto;
+}
+
+#contact-details .map iframe {
+  width: 100%;
+  height: 100%;
+}
+#contact-details .map .map-name {
+  display: block;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+#contact-details .map .map-name h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.more-info {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.more-info .contact-title {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 18px;
+  color: #797878;
+}
+
+.info-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+}
+
+#contact-details .info-row .col h4 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 450;
+}
+
+#contact-details .info-row .col p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#contact-details .info-row .divider {
+  width: 1px;
+  height: 70px;
+  background: #474747;
+}
+
+/* ===== POPUP BOOKING =====
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: #fff;
+  width: 400px;
+  margin: 6% auto;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* animation mượt */
+/* @keyframes fadeIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* input */
+/* .modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+} */
+
+/* label */
+/* .modal-content label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+} */
+
+/* button */
+/* .submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #c97f6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+}  */
